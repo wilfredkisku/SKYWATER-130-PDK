@@ -85,6 +85,10 @@ The Figure below is the **magic** interface and the tcl console, **netgen**, **x
  
  netgen -b  # batch mode
  ```
+ <img src="images/5xschem_after_setup.png">
+ <img src="images/6magic_after_setup.png">
+
+ 
  
 #### Creating Sky130 Device Layout in Magic
 #### Creating Simple Schematic in Xschem
