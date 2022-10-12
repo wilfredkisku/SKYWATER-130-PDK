@@ -101,6 +101,7 @@ ls -s /usr/shapep/pdk/sky130A/libs.tech/magic/sky130A.magicrc .magicrc
 cd ../netgen
 ln -s /usr/shapep/pdk/sky130A/libs.tech/netgen/sky130A_setup.tcl setup.tcl
 ```
+#### Creating Sky130 Device Layout in Magic
 
 The Magic tools shows the technology associated linked with the **magic** instance can be run with a command **magic -d XR** for better and saturated display of the layers and text values.
  
@@ -112,7 +113,7 @@ The below figure shows a lot of examples that can be explored. The link shows as
  
  <img src="images/5xschem_after_setup.png">
 
-There are vaious tips to work with the magic tools for drawing, selecting and placing the layers:
+There are various tips to work with the magic tools for drawing, selecting and placing the layers:
 
 - **Left** and **Right click** to create a box for placing layer values
 - Middle mouse button to add the layer -> **painting**
@@ -120,9 +121,15 @@ There are vaious tips to work with the magic tools for drawing, selecting and pl
 - Can be panned and zommed using the scroll 
 - Layout can be created using the schematic or also can be drawn freehand.
 - **Devices1** and **Devices2** can be selected from which the device parameters for NMOS and PMOS can be changes, that have been selected.
-
+- click on **v** to view the layout if it pans out of the viewing area.
+- From the paramerters menu things like **guard rings, transistors from device type can be changed, guard value** can be changed. If the window is closed can be opening using **ctrl+p**
+- If you are working in the layout type **;** andn type a command without going to the command window.
+- **what** command to know about the selection in the layout window
 <img src="images/7painting.png">
-<img src="images/8nmos">
+<img src="images/8nmos.png">
+
+#### Creating Simple Schematic in Xschem
+
 <img src="images/9inverter.png">
 <img src="images/10tb.png">
 <img src="images/11plot.png">
