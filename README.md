@@ -94,12 +94,12 @@ mkdir xschem
 mkdir mag
 mkdir netgen
 
-ln -s /usr/shapep/pdk/sky130A/libs.tech/xschem/xschemrc
-ln -s /usr/shapep/pdk/sky130A/libs.tech/ngspice/spinit .spiceinit
+ln -s /usr/share/pdk/sky130A/libs.tech/xschem/xschemrc
+ln -s /usr/share/pdk/sky130A/libs.tech/ngspice/spinit .spiceinit
 cd ../mag
-ls -s /usr/shapep/pdk/sky130A/libs.tech/magic/sky130A.magicrc .magicrc
+ls -s /usr/share/pdk/sky130A/libs.tech/magic/sky130A.magicrc .magicrc
 cd ../netgen
-ln -s /usr/shapep/pdk/sky130A/libs.tech/netgen/sky130A_setup.tcl setup.tcl
+ln -s /usr/share/pdk/sky130A/libs.tech/netgen/sky130A_setup.tcl setup.tcl
 ```
 #### Creating Sky130 Device Layout in Magic
 
@@ -174,7 +174,80 @@ Creating the chematic
 
 ### Day 2 
 #### GDS Read
+The GDS file comes form the skywater foundry that can be checked for the cell layouts.
+
+```
+$ mkdir workdir
+$ cd workdir
+$ mkdir mag
+$ cd mag
+$ cp /usr/share/pdk/sky130A/libs.tech/magic/sky130A.magicrc ./.magicrc #copies the magicrc from the sky130A library for magic
+```
+
+Commands in the Magic tcl console for reading the styles that have been set by defualt and then reading the **gds** from the SKY130 library as we are working with this paprticular foundry.
+
+```
+Main console display active (Tcl8.6.8 / Tk8.6.8)
+% cif listall istyle
+sky130(vendor) sky130() rdlimport
+% cif list istyle
+sky130(vendor)
+% cif list istyle xxx
+"xxx" is not one of the CIF input styles Magic knows.
+The current style is "sky130(vendor)".
+The CIF input styles are: sky130(vendor), sky130(), rdlimport.
+% cif istyle xxx
+"xxx" is not one of the CIF input styles Magic knows.
+The current style is "sky130(vendor)".
+The CIF input styles are: sky130(vendor), sky130(), rdlimport.
+% gds read /usr/share/pdk/sky130A/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds
+```
+Now to select from the **lib.ref** from the SKY130 library use the cell manager from the options menu on the top menu bar and then select the cell manager.
+
+ - Select the and (2 input and 1 output **and cell**) 
+ - By default the istyle that has been set is the **sky130(vendor)**
+ - can be changed using the command **cif istyle sky130(vendor)**
+ - can rerun the **gds read**
+ - it clears the old gds files and replace it by the new, where the vendor file. The **vendor** styles has the port information (**yellow -> blue**).
+ - **cif istyle sky130()**
+ - **gds noduplicate true** helps to read only the cell defintions that have not been already read in.
+
+<img src="images/d2_1_magic.png">
+<img src="images/d2_2_cellmanager.png">
+<img src="images/d2_3_selectionwithstyles.png">
+
 #### Port
+The port can be selected using the **right** and the **left** selection keys by creating a bounding box over the ports and querying using the tcl console window. The issue with this is with overlapping ports and that can be recified using the following procedure.
+
+```
+% port index
+3
+% port index
+Exactly one label may be present under the cursor box.
+Use "port <name> ..." to specify a uniqe port.
+% **port first**
+```
+- **port first** to query for the first selected port
+- **port <number> class** to get the infomation on the pin, but the issue here is that it is the metadata information that is not present in the gds. While the **lef files has the metadata** information. in spice the metadata that is the pin order is important.
+  
+```
+$ ls /usr/share/pdk/sky130A/libs.ref/sky130_fd_sc_hd
+$ cd /usr/share/pdk/sky130A/libs.ref/sky130_fd_sc_hd/spice  #spice library for the standard cells
+$ vi sky130_fd_sc_hd_spice #edit the file and search for the file for and2_1
+```
+The spice file has the port ordering but this is the metadata that is mentioned in the spice related file and not in the gds file. **Magic keeps the port order, along with the metadata**.
+
+The metadata can be anotated:
+```
+% lef read /usr/share/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef
+Reading LEF data from file /usr/share/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef.
+This action cannot be undone.
+LEF read: Processed 68161 lines.
+```
+It contains the macros for all the cells and the metadata.
+<img src="images/d2_4_lef_read.png">
+<img src="images/d2_5_port_annotations.png">
+  
 #### Abstract Views
 #### Basic Extraction
 #### Setup for DRC
