@@ -157,9 +157,9 @@ Creating the chematic
 - Add codes for running the simulation
   - add from the library and select **code_shown.sym**
   - Get the device models from the library **value = ".lib /usr/shar/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt"**, where tt is the process corner.
-  - **value = ".control  
-  tran 1n 1u
-  plot V(in) V(out)
+  - **value = ".control \
+  tran 1n 1u \
+  plot V(in) V(out) \
   .endc"**
 <img src="images/10tb.png">
 <img src="images/11plot.png">
