@@ -60,10 +60,31 @@ The tools have been installed in the VSD sandbox with the PDKs installed and bui
 
 The tools can be compiled from the source, from github. This makes sure that the tools that has been built is uptodate and has the most recent version with bugs that have been taken care of to date.
 
+To invoke commands, use the termial with the associated binaries for the tools that have been added to the path during the installations and which can be invoked from the command line. Tools such as **magic, netgen, xschem, ngspice** are all as simple as typing the specific names on the terminal window and either getting the GUI interface or a command line interface for the tools (tcl command interface generally).
+
+```
+$ magic
+```
+The Figure below is the **magic** interface and the tcl console, **netgen**, **xschem** for building the schematics and ngspicie for simuation using **ngspice**. 
+
  <img src="images/1magic.png">
  <img src="images/2netgen.png">
  <img src="images/3xschem.png">
  <img src="images/4ngspice.png">
+ 
+ Commands for invoking the different tools that are specific to the tasks for the verification process **magic** for layout, **xschem** for schematic, **netgen** where it is a tool for comparing netlists, a process known as LVS, which stands for "Layout vs. Schematic".
+ ```
+ magic -noconsole         #without console
+ magic -dnull -noconsole  #to be invoked while **batch mode** and when invoked from a script
+ magic -dnull -noconsole foo.tcl
+ 
+ netgen -noconsole        #without console
+ netgen -batch source foo.tcl
+ 
+ xschem --tcl foo.tcl -q
+ 
+ netgen -b  # batch mode
+ ```
  
 #### Creating Sky130 Device Layout in Magic
 #### Creating Simple Schematic in Xschem
