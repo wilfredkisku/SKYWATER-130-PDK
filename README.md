@@ -85,8 +85,33 @@ The Figure below is the **magic** interface and the tcl console, **netgen**, **x
  
  netgen -b  # batch mode
  ```
+ 
+There is a need to setup the directory hierarchy for running the tools for a particular project that follows the same structure throughout projects.
+
+
+```
+mkdir xschem
+mkdir mag
+mkdir netgen
+
+ln -s /usr/shapep/pdk/sky130A/libs.tech/xschem/xschemrc
+ln -s /usr/shapep/pdk/sky130A/libs.tech/ngspice/spinit .spiceinit
+cd ../mag
+ls -s /usr/shapep/pdk/sky130A/libs.tech/magic/sky130A.magicrc .magicrc
+cd ../netgen
+ln -s /usr/shapep/pdk/sky130A/libs.tech/netgen/sky130A_setup.tcl setup.tcl
+```
+
+The Magic tools shows the technology associated linked with the **magic** instance can be run with a command **magic -d XR** for better and saturated display of the layers and text values.
+ 
+ Can **quit** with the **quit** command on the console or the **File->Quit** optin from the GUI.
+ 
+ <img src="images/6magic_after_setup.png"> 
+ 
+The below figure shows a lot of examples that can be explored. The link shows as blocks on left of the windows by clicking on it and type **e** for enter, typing **ctrl+e** to get back.
+ 
  <img src="images/5xschem_after_setup.png">
- <img src="images/6magic_after_setup.png">
+
 
  
  
