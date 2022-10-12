@@ -7,11 +7,12 @@ The RTL is a register transfer level netlist of the chip that is in the making. 
 ## Content
   - [Day 1](###day-1)
     - [OpenROAD flow](###openroad-flow)
-
+  - [Day 2](###day-1)
+    - [OpenROAD flow](###openroad-flow)
 ### Day 1 
 ### OpenROAD flow
 
  <img src="images/1magic.png">
- <img src="images/2xschem.png">
- <img src="images/3netgen.png">
+ <img src="images/2netgen.png">
+ <img src="images/3xschem.png">
  <img src="images/4ngspice.png">
