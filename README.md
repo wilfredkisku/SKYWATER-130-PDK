@@ -56,6 +56,9 @@ The RTL is a register transfer level netlist of the chip that is in the making. 
     
 ### Day 1 
 #### Check Tool Installations
+The tools have been installed in the VSD sandbox with the PDKs installed and built. While these can be installed by cloning the github repository and then building the source from scratch. The tools and the PDKs that are used in the workshop are free and open source. They can be easily installed in Linux systems such as Ubuntu, CentOS etc.
+
+The tools can be compiled from the source, from github. This makes sure that the tools that has been built is uptodate and has the most recent version with bugs that have been taken care of to date.
 
  <img src="images/1magic.png">
  <img src="images/2netgen.png">
