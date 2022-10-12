@@ -249,6 +249,12 @@ It contains the macros for all the cells and the metadata.
 <img src="images/d2_5_port_annotations.png">
   
 #### Abstract Views
+
+Reading the lef file shows an abstract (not a detailed) view of the layout. Read the spice file adds the port information from the sppicce definition in the library. This shows that all the transistors has been lost.
+
+- Are not a exact reprsentation
+- 
+
 #### Basic Extraction
 #### Setup for DRC
 #### Setup for LVS
