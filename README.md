@@ -157,19 +157,18 @@ Creating the chematic
 - Add codes for running the simulation
   - add from the library and select **code_shown.sym**
   - Get the device models from the library **value = ".lib /usr/shar/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt"**, where tt is the process corner.
-  - **value = ".control \
+  - Add a second code block for simulating with the given change as **value = ".control \
   tran 1n 1u \
   plot V(in) V(out) \
   .endc"**
+  - From the xschem window click on the **netlist** opption on the top right and then select **simulate** to run the simulation, it takes a while to start as it loads all the library elements.
+  - It runs and then creates a plot.
+  - After the simulation the schematic (of which the layout needs to be created has to be selected ans then from **schematic** select **LVS netlist: Top level is a .subckt**. This ensures that the subcircucit is propeprly defined for creating the layout with pinsn in the layout.
+  - Then finally click on the netlist again to generate a netlist.
 <img src="images/10tb.png">
 <img src="images/11plot.png">
 <img src="images/12spicerun.png">
 
-
-
-#### Creating Sky130 Device Layout in Magic
-#### Creating Simple Schematic in Xschem
-#### Creating Symbol and Exporting Schematic in Xschem
 #### Importing Schematic to Layout and Inverter Layout Steps
 #### Final DRC/LVS Checks and Post Layout Simulations
 
