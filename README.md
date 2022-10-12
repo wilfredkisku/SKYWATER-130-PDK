@@ -130,7 +130,37 @@ There are various tips to work with the magic tools for drawing, selecting and p
 
 #### Creating Simple Schematic in Xschem
 
+Creating the chematic
+- File **New Schematic**
+- The windows contains three different libraries 
+  - Working Directory
+  - Skywater PDK (select for the MOSFETs)
+  - Xschem generic library for voltages and other for simulations
+- Select from the library **nfet_01v8.sym** need to select a four terminal device as the bulk is necessary and as in 3 terminal device it is mentioned as a parameter.
+- Libray can be opened again using the **insert** key from the keyboard.
+- Same thing to select the pfet. (select the fet without the bulk terminal)
+- Since pins are not speciic to the technology or library so select it from the generic library.
+- **M** ket can be used to move it. (place the **ipin**, **opin** and **iopin**)
+- **W** to wire the components.
+- **Delete** to delete the components.
+- Changing the pin names by cliking and typing **q** to replace the **xxx** values to a resonably unstandable names.
+- select nfet and type **q** to change the values to **L=0.18, W=4.5, nf=3**, for pfet **L=0.18, W=3, nf=3**
+
 <img src="images/9inverter.png">
+
+#### Creating Symbol and Exporting Schematic in Xschem
+
+- The testbench is created to check the functional validation of the schematic that has been created by keeping it isolated with the schematic file that has been created.
+- The Volatage sources can be drawn from the generic library
+- click and select the voltage and type **q** and set to **1.8**
+- value of the input voltage to the inverter needs to be put to **"PWL(0 0 20n 0 900n 1.8)"**
+- Add codes for running the simulation
+  - add from the library and select **code_shown.sym**
+  - Get the device models from the library **value = ".lib /usr/shar/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt"**, where tt is the process corner.
+  - **value = ".control  
+  tran 1n 1u
+  plot V(in) V(out)
+  .endc"**
 <img src="images/10tb.png">
 <img src="images/11plot.png">
 <img src="images/12spicerun.png">
