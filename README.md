@@ -308,7 +308,7 @@ Realoading the gds files from the standard library now makes sure that the file 
 - Create a Cell like **and2_1** from the **mag** folder.
 - Read vendor gds **readonly mode**, annotate it with lef and spice.
 - Write it locally and comapare if the two files created locally and the one in the standard library are the same or not.
-
+- The entire process deals with working with abstract views for the standard libraries and creating new standalone gds files from the pdks, locally.
 <img src="images/d2_9_final.png">
   
 #### Basic Extraction
