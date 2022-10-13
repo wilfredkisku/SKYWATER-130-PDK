@@ -252,8 +252,13 @@ It contains the macros for all the cells and the metadata.
 
 Reading the lef file shows an abstract (not a detailed) view of the layout. Read the spice file adds the port information from the sppicce definition in the library. This shows that all the transistors has been lost.
 
-- Are not a exact reprsentation
-- 
+- The abstract views are not a exact reprsentation
+- **load test**
+- Put the cursor box on the window and then type.
+- **getcell sky130_fd_sc_hd__and2_1**
+- This gets the abstract layout (**v** to view the cell,**s** to select and **x** to expand), still the abstract view
+- **gds write test** gives an error message as this is an abstract view
+- read again the gds that has been written (magic should not work with metadata only)
 
 #### Basic Extraction
 #### Setup for DRC
