@@ -272,9 +272,9 @@ Warning:  Writing abstract view of "sky130_fd_sc_hd__and2_1" to GDS.  This is pr
    Generating output for cell sky130_fd_sc_hd__and2_1
    Generating output for cell test
 ```
-<img src="images/d2_6_abstract.png">
-<img src="images/d2_7_abstract.png">
-<img src="images/d2_8_abstract.png">
+<img src="images/d2_6_abstract_1.png">
+<img src="images/d2_7_abstract_2.png">
+<img src="images/d2_8_abstract_3.png">
 
 #### Basic Extraction
 #### Setup for DRC
