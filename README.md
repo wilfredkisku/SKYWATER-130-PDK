@@ -312,6 +312,22 @@ Realoading the gds files from the standard library now makes sure that the file 
 <img src="images/d2_9_final.png">
   
 #### Basic Extraction
+
+The extraction methods gets the spice netlist file from the layout file or the gds files that has been created or taken from the standard library and connect as a subcircuit.
+  
+```
+load sky130_fd_sc_hd__and2_1
+extract all
+
+ext2spice lvs
+ext2spice
+
+ext2spice cthresh 0
+ext2spice
+
+ext2spice cthresh 0.01
+ext2spice
+```
 #### Setup for DRC
 #### Setup for LVS
 #### Setup for XOR
