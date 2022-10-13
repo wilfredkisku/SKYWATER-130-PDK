@@ -379,6 +379,11 @@ exttospice finished.
 exttospice finished.
 ```
 <img src="images/d2_11_complete_extraction.png">
+  
+Task to work on:
+- Obtain the netlist of the ideal circuit with the paracitics, extract the capcitances and RC netlist files and run the similations.
+- Carry out a similation comparing the three different spice files (transient analsis and check how they fare as compared to each other.
+
 #### Setup for DRC
 #### Setup for LVS
 #### Setup for XOR
