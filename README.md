@@ -286,7 +286,7 @@ Warning:  Writing abstract view of "sky130_fd_sc_hd__and2_1" to GDS.  This is pr
 <img src="images/d2_7_saving_2.png">
 
  - Working with the**abstract view** can be to obtain views that can be changed without affecting the actual verndor specified files.
- - To view the cell property type **property**, selecting the cell hierachy using the **shift+>** (going to the top level within the cell) and **shift+<** desceding into the cell hierarchy.
+ - To view the cell property type **property**, selecting the cell hierachy using the **shift+(greaterthan)** (going to the top level within the cell) and **shift+(lessthan)** desceding into the cell hierarchy.
  - The effect of making changes and saving into the abstracct views can be seen using the inpainting tools and making changes after making the cell editable. **gds writeable sky130_fd_sc_hd__and2_1 true** can be used to make it editable and then made changes into.
  - **gds write test** and **gds_read_test** after restarting magic verifies that changes into the standard cells have not been retained.
   
