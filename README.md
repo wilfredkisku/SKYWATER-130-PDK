@@ -293,7 +293,19 @@ Warning:  Writing abstract view of "sky130_fd_sc_hd__and2_1" to GDS.  This is pr
 <img src="images/d2_8_changes_1.png">
 <img src="images/d2_8_changes_2.png">
 <img src="images/d2_8_changes_3.png">
-  
+
+Reading the gds files from cell using the follwoing command:
+```
+% gds readonly true
+% gds rescale false
+% gds read /usr/share/pdk/130A/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds
+[...]
+% load sky130_fd_sc_hd__and2_1
+% property
+{FIXED_BBOX 0 0 460 544} {GDS_FILE $PDKPATH/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds} {GDS_END 341822} {GDS_START 336980} {path 0.000 13.600 11.500 13.600 }
+```
+Realoading the gds files from the standard library now makes sure that the file metadata are are kept as the property in the current gds read file.
+ 
 #### Basic Extraction
 #### Setup for DRC
 #### Setup for LVS
