@@ -260,6 +260,22 @@ Reading the lef file shows an abstract (not a detailed) view of the layout. Read
 - **gds write test** gives an error message as this is an abstract view
 - read again the gds that has been written (magic should not work with metadata only)
 
+```
+% load test
+% getcell sky130_fd_sc_hd__and2_1
+sky130_fd_sc_hd__and2_1_0
+Loading DRC CIF style.
+Selected cell is test/sky130_fd_sc_hd__and2_1 (sky130_fd_sc_hd__and2_1_0)
+select: sky130_fd_sc_hd__and2_1_0
+% gds write test
+Warning:  Writing abstract view of "sky130_fd_sc_hd__and2_1" to GDS.  This is probably not what you want to do.
+   Generating output for cell sky130_fd_sc_hd__and2_1
+   Generating output for cell test
+```
+<img src="images/d2_6_abstract.png">
+<img src="images/d2_7_abstract.png">
+<img src="images/d2_8_abstract.png">
+
 #### Basic Extraction
 #### Setup for DRC
 #### Setup for LVS
