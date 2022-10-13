@@ -328,6 +328,8 @@ ext2spice
 ext2spice cthresh 0.01
 ext2spice
 ```
+<img src="images/d2_10_extract_1.png">
+<img src="images/d2_10_extract_2.png">
 #### Setup for DRC
 #### Setup for LVS
 #### Setup for XOR
