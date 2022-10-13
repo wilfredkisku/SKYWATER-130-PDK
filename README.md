@@ -408,7 +408,27 @@ Loading DRC CIF style.
 Using technology "sky130A", version 1.0.205-0-g6de165c
 Done!
 ```
+The follwoing commands are to check the styles for drc avialable and the one that is selected during the current run, while the batch mode has the drc style(full) selected that can be changed using the **drc style drc(full)** command on the console.
   
+```
+% drc listall style
+drc(fast) drc(full) drc(routing)
+% drc style drc(full)
+DRC style is now "drc(full)"
+% drc check
+Loading DRC CIF style.
+% 
+```
+<img src="images/d2_12_drc.png">
+
+This commands lists the rules that have been violated and gets printed in the console while in the GUI is displayed as **7 rules** that are being violated.
+```
+% drc why
+All nwells must contain metal-connected N+ taps (nwell.4)
+N-diff distance to P-tap must be < 15.0um (LU.2)
+P-diff distance to N-tap must be < 15.0um (LU.3)
+% 
+```
 #### Setup for LVS
 #### Setup for XOR
 
