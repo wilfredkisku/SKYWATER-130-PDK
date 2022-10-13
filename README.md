@@ -273,9 +273,18 @@ Warning:  Writing abstract view of "sky130_fd_sc_hd__and2_1" to GDS.  This is pr
    Generating output for cell test
 ```
 <img src="images/d2_6_abstract_1.png">
-<img src="images/d2_7_abstract_2.png">
-<img src="images/d2_8_abstract_3.png">
+<img src="images/d2_6_abstract_2.png">
+<img src="images/d2_6_abstract_3.png">
 
+ - While the abstract views are cannot result in a valid gds file, there are workaround to get a valid gds layer.
+ - The local directory has a **test.mag** file.
+ - The **load test** command get a clean image of the gds of the **and** gate.
+ - The **save command** works on the current cell that is being worked on and does not care about the sub cells. Thus is does not save the sky130_fd_sc_hd_and2_1.mag information which saving the test file as a mag file.
+ 
+<img src="images/d2_7_saving_0.png">
+<img src="images/d2_7_saving_1.png">
+<img src="images/d2_7_saving_2.png">
+  
 #### Basic Extraction
 #### Setup for DRC
 #### Setup for LVS
