@@ -290,9 +290,9 @@ Warning:  Writing abstract view of "sky130_fd_sc_hd__and2_1" to GDS.  This is pr
  - The effect of making changes and saving into the abstracct views can be seen using the inpainting tools and making changes after making the cell editable. **gds writeable sky130_fd_sc_hd__and2_1 true** can be used to make it editable and then made changes into.
  - **gds write test** and **gds_read_test** after restarting magic verifies that changes into the standard cells have not been retained.
   
-<img src="images/d2_7_changes_1.png">
-<img src="images/d2_7_changes_2.png">
-<img src="images/d2_7_changes_3.png">
+<img src="images/d2_8_changes_1.png">
+<img src="images/d2_8_changes_2.png">
+<img src="images/d2_8_changes_3.png">
   
 #### Basic Extraction
 #### Setup for DRC
