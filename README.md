@@ -305,7 +305,11 @@ Reading the gds files from cell using the follwoing command:
 {FIXED_BBOX 0 0 460 544} {GDS_FILE $PDKPATH/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds} {GDS_END 341822} {GDS_START 336980} {path 0.000 13.600 11.500 13.600 }
 ```
 Realoading the gds files from the standard library now makes sure that the file metadata are are kept as the property in the current gds read file.
- 
+- Create a Cell like **and2_1** from the **mag** folder.
+- Read vendor gds **readonly mode**, annotate it with lef and spice.
+- Write it locally and comapare if the two files created locally and the one in the standard library are the same or not.
+
+<img src="images/d2_9_final.png">
 #### Basic Extraction
 #### Setup for DRC
 #### Setup for LVS
