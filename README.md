@@ -367,7 +367,18 @@ Total Nets: 9
 Nets extracted: 9 (1.000000)
 Nets output: 7 (0.777778)
 ```  
+Now to complete the RC etraction and then to incorporate the sky130_fd_sc_hd__and2_1.ext.res file into the capcitance extracted into the spice netlist we need to follow the stes as given below to get the fully extrated file.
 
+```
+% ext2spice lvs
+% ext2spice
+exttospice finished.
+% ext2spice cthresh 0.01
+% ext2spice extresist on
+% ext2spice
+exttospice finished.
+```
+<img src="images/d2_11_complete_extraction.png">
 #### Setup for DRC
 #### Setup for LVS
 #### Setup for XOR
