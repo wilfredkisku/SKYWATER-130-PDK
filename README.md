@@ -330,6 +330,44 @@ ext2spice
 ```
 <img src="images/d2_10_extract_1.png">
 <img src="images/d2_10_extract_2.png">
+
+For the RC extraction you need to run the following command on the tcl console:
+- to generate a node file
+- to generate a sim file
+```
+ext2sim labels on
+ext2sim
+```
+
+```
+[...]
+Port: name = X exists, forcing drivepoint
+Location is (397, 425); drivepoint (397, 153)
+Port: name = X exists, forcing drivepoint
+Location is (397, 425); drivepoint (397, 85)
+Port: name = X exists, forcing drivepoint
+Location is (397, 425); drivepoint (397, 221)
+Port: name = X exists, forcing drivepoint
+Location is (397, 425); drivepoint (397, 289)
+Port: name = X exists, forcing drivepoint
+Location is (397, 425); drivepoint (397, 357)
+Port: name = X exists, forcing drivepoint
+Location is (397, 425); drivepoint (397, 425)
+Port: name = B exists, forcing drivepoint
+Location is (213, 221); drivepoint (213, 221)
+Port: name = A exists, forcing drivepoint
+Location is (29, 221); drivepoint (121, 221)
+Port: name = A exists, forcing drivepoint
+Location is (29, 221); drivepoint (29, 221)
+Port: name = VPB exists, forcing drivepoint
+Location is (29, 527); drivepoint (29, 527)
+Port: name = VNB exists, forcing drivepoint
+Location is (29, -16); drivepoint (29, -17)
+Total Nets: 9
+Nets extracted: 9 (1.000000)
+Nets output: 7 (0.777778)
+```  
+
 #### Setup for DRC
 #### Setup for LVS
 #### Setup for XOR
