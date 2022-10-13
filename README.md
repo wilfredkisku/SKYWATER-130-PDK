@@ -310,6 +310,7 @@ Realoading the gds files from the standard library now makes sure that the file 
 - Write it locally and comapare if the two files created locally and the one in the standard library are the same or not.
 
 <img src="images/d2_9_final.png">
+  
 #### Basic Extraction
 #### Setup for DRC
 #### Setup for LVS
