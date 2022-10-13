@@ -383,8 +383,32 @@ exttospice finished.
 Task to work on:
 - Obtain the netlist of the ideal circuit with the paracitics, extract the capcitances and RC netlist files and run the similations.
 - Carry out a similation comparing the three different spice files (transient analsis and check how they fare as compared to each other.
-
+  
 #### Setup for DRC
+
+```
+kisku.1@pv-workshop-05:~/lab02/mag$ /usr/share/pdk/sky130A/libs.tech/magic/run_standard_drc.py /usr/share/pdk/sky130A/libs.ref/sky130_fd_sc_hd/mag/sky130_fd_sc_hd__and2_1.mag 
+Evaluating full DRC results for layout sky130_fd_sc_hd__and2_1
+Running: magic -dnull -noconsole -rcfile /usr/share/pdk/sky130A/libs.ref/sky130_fd_sc_hd/mag/.magicrc /home/kisku.1/lab02/mag/run_magic_drc_sky130_fd_sc_hd__and2_1.tcl
+Running in directory: /usr/share/pdk/sky130A/libs.ref/sky130_fd_sc_hd/mag
+
+Magic 8.3 revision 195 - Compiled on Thu Aug  5 04:06:36 UTC 2021.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+Using NULL graphics device.
+Processing system .magicrc file
+Sourcing design .magicrc for technology sky130A ...
+2 Magic internal units = 1 Lambda
+Input style sky130(vendor): scaleFactor=2, multiplier=2
+Scaled tech values by 2 / 1 to match internal grid scaling
+Loading sky130A Device Generator Menu ...
+Loading "/home/kisku.1/lab02/mag/run_magic_drc_sky130_fd_sc_hd__and2_1.tcl" from command line.
+DRC style is now "drc(full)"
+Loading DRC CIF style.
+Using technology "sky130A", version 1.0.205-0-g6de165c
+Done!
+```
+  
 #### Setup for LVS
 #### Setup for XOR
 
