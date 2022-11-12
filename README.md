@@ -97,7 +97,7 @@ mkdir netgen
 ln -s /usr/share/pdk/sky130A/libs.tech/xschem/xschemrc
 ln -s /usr/share/pdk/sky130A/libs.tech/ngspice/spinit .spiceinit
 cd ../mag
-ls -s /usr/share/pdk/sky130A/libs.tech/magic/sky130A.magicrc .magicrc
+ln -s /usr/share/pdk/sky130A/libs.tech/magic/sky130A.magicrc .magicrc
 cd ../netgen
 ln -s /usr/share/pdk/sky130A/libs.tech/netgen/sky130A_setup.tcl setup.tcl
 ```
